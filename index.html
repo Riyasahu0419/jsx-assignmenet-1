@@ -14,17 +14,21 @@
       
     const App = () => {
 
-      const handleClick = () =>{
+      const [btntxt ,  setBtn]= React .useState("Alert Hello")
+
+      const Click = () =>{
         alert("Hello")
+
+        setBtn((preTxt)=>(preTxt==="Alert Hello" ? "Alert Bye" : "Alert Hello"))
       };
 
 return(
 <>
-<p>React is a javaScript library</p>
-<div className="main">
+<p> React is a javaScript library</p>
+<div class="main"  style={{ borderRadius: "5px"}}>
 
       <p>Click the below button to alert 'Hello'</p>
-      <button onClick={handleClick}>alert Hello</button>  
+      <button onClick={Click}>{btntxt}</button>  
 </div>
 
 </>
